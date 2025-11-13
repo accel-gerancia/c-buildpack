@@ -19,4 +19,8 @@ cp tnsrv "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'tnsrv' trouvé, vérifie t
 cp cmpmalt "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'cmpmalt' trouvé, vérifie ton Makefile"
 cp ternet "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'ternet' trouvé, vérifie ton Makefile"
 
+chmod +x "$BUILD_DIR/ternet"
+chmod +x "$BUILD_DIR/tnsrv"
+chmod +x "$BUILD_DIR/cmpmalt"
+
 echo "✅ Build terminé."
