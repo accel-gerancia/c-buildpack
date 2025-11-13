@@ -4,6 +4,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 echo "=== Compilation du projet ==="
+echo $BUILD_DIR
 
 # Se déplacer dans le sous-dossier où se trouve ton Makefile
 cd "$BUILD_DIR/tnlinux142/usr/ternet" || exit 1
@@ -18,5 +19,6 @@ make
 cp tnsrv "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'tnsrv' trouvé, vérifie ton Makefile"
 cp cmpmalt "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'cmpmalt' trouvé, vérifie ton Makefile"
 cp ternet "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'ternet' trouvé, vérifie ton Makefile"
+
 
 echo "✅ Build terminé."
