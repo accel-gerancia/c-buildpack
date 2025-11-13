@@ -2,5 +2,5 @@
 cat <<EOF
 ---
 default_process_types:
-  web: ./app
+  web: ./tnlinux142/usr/ternet/app
 EOF

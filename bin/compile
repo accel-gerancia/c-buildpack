@@ -3,10 +3,18 @@
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-echo "=== Build via Makefile ==="
-cd $BUILD_DIR
+echo "=== Compilation du projet ==="
 
+# Se déplacer dans le sous-dossier où se trouve ton Makefile
+cd "$BUILD_DIR/tnlinux142/usr/ternet" || exit 1
+
+echo "Dossier courant : $(pwd)"
+
+# Exécuter la compilation
 make clean || true
 make
+
+# Copier le binaire final à la racine du build pour Scalingo
+cp app "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'app' trouvé, vérifie ton Makefile"
 
 echo "✅ Build terminé."
