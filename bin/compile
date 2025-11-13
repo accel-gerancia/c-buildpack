@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+
+echo "=== Build via Makefile ==="
+cd $BUILD_DIR
+
+make clean || true
+make
+
+echo "✅ Build terminé."
