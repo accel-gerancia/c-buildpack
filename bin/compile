@@ -15,6 +15,6 @@ make clean || true
 make
 
 # Copier le binaire final à la racine du build pour Scalingo
-cp app "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'app' trouvé, vérifie ton Makefile"
+cp tnsrv "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'tnsrv' trouvé, vérifie ton Makefile"
 
 echo "✅ Build terminé."
