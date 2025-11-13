@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-echo "C"
-exit 0
+echo "C" && exit 0
