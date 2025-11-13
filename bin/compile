@@ -16,9 +16,10 @@ make clean || true
 make
 
 # Copier le binaire final à la racine du build pour Scalingo
-cp tnsrv "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'tnsrv' trouvé, vérifie ton Makefile"
-cp cmpmalt "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'cmpmalt' trouvé, vérifie ton Makefile"
-cp ternet "$BUILD_DIR/" || echo "⚠️ Aucun fichier 'ternet' trouvé, vérifie ton Makefile"
+
+cp tnsrv "/usr/share/" || echo "⚠️ Aucun fichier 'tnsrv' trouvé, vérifie ton Makefile"
+cp cmpmalt "/usr/share/" || echo "⚠️ Aucun fichier 'cmpmalt' trouvé, vérifie ton Makefile"
+cp ternet "/usr/share/" || echo "⚠️ Aucun fichier 'ternet' trouvé, vérifie ton Makefile"
 
 
 echo "✅ Build terminé."
